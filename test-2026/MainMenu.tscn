@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://divmplt5ep7fs"]
+
+[ext_resource type="Script" uid="uid://dhbogeefetm2o" path="res://Scripts/MainMenu.gd" id="1_i26rj"]
+
+[node name="MainMenu" type="Node2D" unique_id=1171906696]
+script = ExtResource("1_i26rj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=478543386]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1655747686]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=282224443]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/Control/Panel" unique_id=1095253677]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 484.0
+offset_right = 1087.0
+offset_bottom = 629.0
+pivot_offset = Vector2(125, 73)
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+
+[connection signal="pressed" from="CanvasLayer/Control/Panel/PlayButton" to="." method="_on_play_button_pressed"]

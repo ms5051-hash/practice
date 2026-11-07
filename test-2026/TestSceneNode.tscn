@@ -1,11 +1,43 @@
 [gd_scene format=3 uid="uid://d1w7lj3ix1m6e"]
 
+[ext_resource type="Script" uid="uid://bxq67tjgcribg" path="res://Scripts/Game.gd" id="1_0c2wj"]
 [ext_resource type="Texture2D" uid="uid://dsgyg2r642esx" path="res://icon.svg" id="1_yo2s6"]
 [ext_resource type="Script" uid="uid://s81am1gfefx0" path="res://Scripts/maincharacter.gd" id="2_rm1v8"]
 
 [node name="Node2D" type="Node2D" unique_id=1821392274]
+script = ExtResource("1_0c2wj")
 
 [node name="New Icon" type="Sprite2D" parent="." unique_id=1253340923]
 position = Vector2(1323, 534)
 texture = ExtResource("1_yo2s6")
 script = ExtResource("2_rm1v8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=748013841]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=763484119]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=818692230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoBack" type="Button" parent="CanvasLayer/Control/Panel" unique_id=737733478]
+layout_mode = 0
+offset_left = 927.0
+offset_top = 391.0
+offset_right = 1056.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 50
+text = "Go Back"
+icon_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/Control/Panel/GoBack" to="." method="_on_go_back_button_pressed"]
