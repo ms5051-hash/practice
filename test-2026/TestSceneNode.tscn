@@ -4,6 +4,6 @@
 
 [node name="Node2D" type="Node2D" unique_id=1821392274]
 
-[node name="Test Icon I placed bro" type="Sprite2D" parent="." unique_id=637253775]
-position = Vector2(529, 347)
+[node name="New Icon" type="Sprite2D" parent="." unique_id=1253340923]
+position = Vector2(456, 351)
 texture = ExtResource("1_yo2s6")
